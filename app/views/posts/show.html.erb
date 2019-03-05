@@ -12,11 +12,11 @@
 </ul>
 
 <h3>Comments:</h3>
-<% @users.each do |user| %>
+<% @comments.each do |comment| %>
   <p>
-    <%= link_to user.username, user_path(user) %>
+    <%= link_to comment.user.username, user_path(comment.user) %>
     says:
-    <%= user.comment.content %>
+    <%= comment.content %>
   </p>
 <% end %>
 
