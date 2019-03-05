@@ -31,7 +31,7 @@
 
   <%= f.fields_for :user, @post.comments.last.build_user do |u| %>
     <%= u.label :username %>
-    <%= u.text_field :username %>
+    <%= u.text_field :username %><br /><br />
   <% end %>
 
   <%= f.submit "Create Comment" %>
