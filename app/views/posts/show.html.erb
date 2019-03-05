@@ -29,7 +29,7 @@
 
   <%= f.collection_select :user_id, User.all, :id, :username, {include_blank: true} %><br /><br />
 
-  <%= f.fields_for :user do |u| %>
+  <%= f.fields_for :user, @post.comments.user.build do |u| %>
     <%= u.label :username %>
     <%= u.text_field :username %>
   <% end %>
