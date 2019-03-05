@@ -18,6 +18,13 @@
   </p>
 <% end %>
 
+<h3>Users:</h3>
+<ul>
+  <%= @unique_users.each do |user| %>
+    <%= link_to user.username, user_path(user) %>
+  <% end %>
+</ul>
+
 <%= form_for @post.comments.build do |f| %>
 
   <%= f.hidden_field :post_id %>
