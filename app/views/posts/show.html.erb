@@ -14,7 +14,7 @@
 <h3>Comments:</h3>
 <% @post.comments.each do |comment| %>
   <p>
-    <%= link_to comment.user.username, user_path(comment.user) %>
+    <%= "#{comment.user.username} says: #{comment.content}" %>
     says:
     <%= comment.content %>
   </p>
