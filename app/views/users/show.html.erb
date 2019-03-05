@@ -1,4 +1,4 @@
-<h1>Posts with Comments by <%= @user.name %></h1>
+<h1>Posts with Comments by <%= @user.username %></h1>
 <ul>
   <% @user.posts.each do |post| %>
     <li><%= link_to post.title, post_path(post) %></li>
