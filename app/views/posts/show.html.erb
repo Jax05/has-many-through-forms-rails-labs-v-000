@@ -26,4 +26,13 @@
   <% end %>
 </ul>
 
-<%= form_for 
+<%= form_for :comment do |f| %>
+
+  <p>  
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </p>
+
+  <%= f.submit %>
+  
+<% end %>
