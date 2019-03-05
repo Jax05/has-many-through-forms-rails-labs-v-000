@@ -28,14 +28,10 @@
 
 <%= form_for :comment do |f| %>
 
-  <p>  
-    <%= f.label :content %>
-    <%= f.text_field :content %>
-  </p>
+  <%= f.label :content %>
+  <%= f.text_field :content %><br /><br />
 
-  <p>
-    <%= f.
-  </p>
+  <%= f.collection_check_boxes :user_ids, User.all, :id, :name, {include_blank: true} %><br /><br />
 
   <%= f.submit %>
   
